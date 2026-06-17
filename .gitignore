@@ -24,3 +24,7 @@ conda/
 dataset/
 .training_cache/
 get-pip.py
+*.npz
+saved_models/*.npz
+.agents/
+skills-lock.json
