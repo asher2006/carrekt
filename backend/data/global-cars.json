@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Toyota Camry", "slug": "toyota-camry", "brand": "Toyota", "region": "Global", "segment": "Sedan", "year": 2025,
+    "engine": "2.5L Hybrid", "transmission": "eCVT", "fuel_type": "Hybrid Petrol", "mileage": "22-25 kmpl", "body_type": "Sedan", "seating": 5,
+    "specs": { "engine": "2.5L Hybrid", "mileage": "22-25 kmpl", "fuel": "Hybrid Petrol", "transmission": "eCVT" },
+    "ai_class_label": "toyota_camry", "features": ["Toyota Safety Sense", "Hybrid powertrain", "Wireless smartphone integration"], "images": []
+  },
+  {
+    "name": "Toyota RAV4", "slug": "toyota-rav4", "brand": "Toyota", "region": "Global", "segment": "Compact SUV", "year": 2025,
+    "engine": "2.5L Petrol / Hybrid", "transmission": "8-Speed AT / eCVT", "fuel_type": "Petrol / Hybrid", "mileage": "14-18 kmpl", "body_type": "SUV", "seating": 5,
+    "specs": { "engine": "2.5L Petrol / Hybrid", "mileage": "14-18 kmpl", "fuel": "Petrol / Hybrid", "transmission": "8-Speed AT / eCVT" },
+    "ai_class_label": "toyota_rav4", "features": ["AWD option", "Toyota Safety Sense", "Large cargo area"], "images": []
+  },
+  {
+    "name": "Toyota Corolla", "slug": "toyota-corolla", "brand": "Toyota", "region": "Global", "segment": "Compact Sedan", "year": 2025,
+    "engine": "1.8L / 2.0L Petrol Hybrid", "transmission": "CVT", "fuel_type": "Petrol / Hybrid", "mileage": "18-24 kmpl", "body_type": "Sedan", "seating": 5,
+    "specs": { "engine": "1.8L / 2.0L Petrol Hybrid", "mileage": "18-24 kmpl", "fuel": "Petrol / Hybrid", "transmission": "CVT" },
+    "ai_class_label": "toyota_corolla", "features": ["Toyota Safety Sense", "Efficient hybrid option", "Compact sedan packaging"], "images": []
+  },
+  {
+    "name": "BMW 3 Series", "slug": "bmw-3-series", "brand": "BMW", "region": "Global", "segment": "Luxury Sedan", "year": 2025,
+    "engine": "2.0L Turbo Petrol / Diesel", "transmission": "8-Speed AT", "fuel_type": "Petrol / Diesel", "mileage": "13-19 kmpl", "body_type": "Sedan", "seating": 5,
+    "specs": { "engine": "2.0L Turbo Petrol / Diesel", "mileage": "13-19 kmpl", "fuel": "Petrol / Diesel", "transmission": "8-Speed AT" },
+    "ai_class_label": "bmw_3_series", "features": ["Sport sedan dynamics", "iDrive infotainment", "Driver assistance package"], "images": []
+  },
+  {
+    "name": "BMW X5", "slug": "bmw-x5", "brand": "BMW", "region": "Global", "segment": "Luxury SUV", "year": 2025,
+    "engine": "3.0L Turbo Petrol / Diesel", "transmission": "8-Speed AT", "fuel_type": "Petrol / Diesel", "mileage": "10-14 kmpl", "body_type": "SUV", "seating": 5,
+    "specs": { "engine": "3.0L Turbo Petrol / Diesel", "mileage": "10-14 kmpl", "fuel": "Petrol / Diesel", "transmission": "8-Speed AT" },
+    "ai_class_label": "bmw_x5", "features": ["xDrive AWD", "Panoramic display", "Adaptive suspension"], "images": []
+  },
+  {
+    "name": "Mercedes-Benz C-Class", "slug": "mercedes-benz-c-class", "brand": "Mercedes-Benz", "region": "Global", "segment": "Luxury Sedan", "year": 2025,
+    "engine": "1.5L / 2.0L Mild Hybrid", "transmission": "9-Speed AT", "fuel_type": "Petrol / Diesel Mild Hybrid", "mileage": "13-20 kmpl", "body_type": "Sedan", "seating": 5,
+    "specs": { "engine": "1.5L / 2.0L Mild Hybrid", "mileage": "13-20 kmpl", "fuel": "Petrol / Diesel Mild Hybrid", "transmission": "9-Speed AT" },
+    "ai_class_label": "mercedes_benz_c_class", "features": ["MBUX", "Digital cockpit", "Advanced driver assistance"], "images": []
+  },
+  {
+    "name": "Mercedes-Benz GLA", "slug": "mercedes-benz-gla", "brand": "Mercedes-Benz", "region": "Global", "segment": "Luxury Compact SUV", "year": 2025,
+    "engine": "1.3L Turbo Petrol / 2.0L Diesel", "transmission": "7/8-Speed DCT", "fuel_type": "Petrol / Diesel", "mileage": "13-18 kmpl", "body_type": "SUV", "seating": 5,
+    "specs": { "engine": "1.3L Turbo Petrol / 2.0L Diesel", "mileage": "13-18 kmpl", "fuel": "Petrol / Diesel", "transmission": "7/8-Speed DCT" },
+    "ai_class_label": "mercedes_benz_gla", "features": ["Compact luxury SUV", "MBUX", "4MATIC option"], "images": []
+  },
+  {
+    "name": "Tesla Model 3", "slug": "tesla-model-3", "brand": "Tesla", "region": "Global", "segment": "EV Sedan", "year": 2025,
+    "engine": "Electric motor", "transmission": "Single-speed automatic", "fuel_type": "Electric", "mileage": "513-629 km range", "body_type": "Sedan", "seating": 5,
+    "specs": { "engine": "Electric motor", "mileage": "513-629 km range", "fuel": "Electric", "transmission": "Single-speed automatic" },
+    "ai_class_label": "tesla_model_3", "features": ["Long-range battery", "Autopilot hardware", "Minimalist cabin"], "images": []
+  },
+  {
+    "name": "Tesla Model Y", "slug": "tesla-model-y", "brand": "Tesla", "region": "Global", "segment": "EV SUV", "year": 2025,
+    "engine": "Electric motor", "transmission": "Single-speed automatic", "fuel_type": "Electric", "mileage": "455-600 km range", "body_type": "SUV", "seating": 5,
+    "specs": { "engine": "Electric motor", "mileage": "455-600 km range", "fuel": "Electric", "transmission": "Single-speed automatic" },
+    "ai_class_label": "tesla_model_y", "features": ["Electric crossover", "Large cargo space", "Autopilot hardware"], "images": []
+  },
+  {
+    "name": "Audi A4", "slug": "audi-a4", "brand": "Audi", "region": "Global", "segment": "Luxury Sedan", "year": 2025,
+    "engine": "2.0L TFSI Petrol", "transmission": "7-Speed DCT", "fuel_type": "Petrol", "mileage": "14-17 kmpl", "body_type": "Sedan", "seating": 5,
+    "specs": { "engine": "2.0L TFSI Petrol", "mileage": "14-17 kmpl", "fuel": "Petrol", "transmission": "7-Speed DCT" },
+    "ai_class_label": "audi_a4", "features": ["Virtual cockpit", "Quattro-inspired dynamics", "Premium cabin"], "images": []
+  },
+  {
+    "name": "Audi Q5", "slug": "audi-q5", "brand": "Audi", "region": "Global", "segment": "Luxury SUV", "year": 2025,
+    "engine": "2.0L TFSI Petrol", "transmission": "7-Speed DCT", "fuel_type": "Petrol", "mileage": "12-15 kmpl", "body_type": "SUV", "seating": 5,
+    "specs": { "engine": "2.0L TFSI Petrol", "mileage": "12-15 kmpl", "fuel": "Petrol", "transmission": "7-Speed DCT" },
+    "ai_class_label": "audi_q5", "features": ["Quattro AWD", "Virtual cockpit", "Premium SUV comfort"], "images": []
+  },
+  {
+    "name": "Ford Mustang", "slug": "ford-mustang", "brand": "Ford", "region": "Global", "segment": "Sports Coupe", "year": 2025,
+    "engine": "2.3L EcoBoost / 5.0L V8", "transmission": "6-Speed MT / 10-Speed AT", "fuel_type": "Petrol", "mileage": "7-12 kmpl", "body_type": "Coupe", "seating": 4,
+    "specs": { "engine": "2.3L EcoBoost / 5.0L V8", "mileage": "7-12 kmpl", "fuel": "Petrol", "transmission": "6-Speed MT / 10-Speed AT" },
+    "ai_class_label": "ford_mustang", "features": ["Iconic coupe design", "Performance variants", "Track apps"], "images": []
+  }
+]

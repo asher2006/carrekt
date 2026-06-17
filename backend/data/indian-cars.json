@@ -1,0 +1,183 @@
+[
+  {
+    "name": "Maruti Swift", "slug": "maruti-swift", "brand": "Maruti Suzuki", "segment": "Hatchback", "year": 2024,
+    "price_min": 599000, "price_max": 899000, "engine": "1.2L Dualjet Petrol", "power": "88 bhp @ 6000 rpm",
+    "torque": "113 Nm @ 4400 rpm", "transmission": "5-Speed MT / AMT", "fuel_type": "Petrol", "mileage": "24.8 kmpl",
+    "fuel_tank": "37 litres", "seating": 5, "body_type": "Hatchback", "rating": 4.2, "ai_class_label": "maruti_swift",
+    "features": ["SmartPlay Pro+ Infotainment","LED Projector Headlamps","Suzuki Connect","Cruise Control","Auto AC","Rear Parking Camera","Push Start","Steering Mounted Controls"],
+    "colors": ["Sizzling Red","Pearl Arctic White","Magma Grey","Luster Blue","Solid Fire Red","Splendid Silver"],
+    "pros": ["Excellent fuel efficiency","Peppy engine","Good resale value","Low maintenance cost"],
+    "cons": ["Compact rear seat","No diesel option","Basic safety in lower trims"], "images": []
+  },
+  {
+    "name": "Maruti Baleno", "slug": "maruti-baleno", "brand": "Maruti Suzuki", "segment": "Premium Hatchback", "year": 2024,
+    "price_min": 665000, "price_max": 995000, "engine": "1.2L Dualjet Petrol", "power": "88 bhp @ 6000 rpm",
+    "torque": "113 Nm @ 4400 rpm", "transmission": "5-Speed MT / AMT", "fuel_type": "Petrol", "mileage": "22.9 kmpl",
+    "fuel_tank": "37 litres", "seating": 5, "body_type": "Hatchback", "rating": 4.3, "ai_class_label": "maruti_baleno",
+    "features": ["9-inch SmartPlay Pro+","360 View Camera","Head-Up Display","LED DRLs","Auto Headlamps","6 Airbags","Hill Hold"],
+    "colors": ["Nexa Blue","Arctic White","Grandeur Grey","Luxe Beige","Splendid Silver","Opulent Red"],
+    "pros": ["Feature-rich","Spacious cabin","Good mileage","Premium feel"], "cons": ["No turbo option","CVT only for automatic","Boot space average"], "images": []
+  },
+  {
+    "name": "Maruti Brezza", "slug": "maruti-brezza", "brand": "Maruti Suzuki", "segment": "Compact SUV", "year": 2024,
+    "price_min": 799000, "price_max": 1410000, "engine": "1.5L Dual VVT Petrol", "power": "103 bhp @ 6000 rpm",
+    "torque": "137 Nm @ 4400 rpm", "transmission": "5-Speed MT / 6-Speed AT", "fuel_type": "Petrol / Mild Hybrid", "mileage": "20.15 kmpl",
+    "fuel_tank": "48 litres", "seating": 5, "body_type": "SUV", "rating": 4.2, "ai_class_label": "maruti_brezza",
+    "features": ["9-inch Infotainment","Sunroof","Wireless Charging","Head-Up Display","360 Camera","6 Airbags","Suzuki Connect","LED Headlamps"],
+    "colors": ["Brave Khaki","Sizzling Red","Pearl Arctic White","Magma Grey","Splendid Silver","Exuberant Blue"],
+    "pros": ["Strong brand value","Good ground clearance","Feature loaded","Smooth AT"], "cons": ["No diesel","Underpowered for highways","Stiff ride"], "images": []
+  },
+  {
+    "name": "Maruti Alto K10", "slug": "maruti-alto-k10", "brand": "Maruti Suzuki", "segment": "Entry Hatchback", "year": 2024,
+    "price_min": 399000, "price_max": 520000, "engine": "1.0L K10C Petrol", "power": "66 bhp @ 5500 rpm",
+    "torque": "89 Nm @ 3500 rpm", "transmission": "5-Speed MT / AMT", "fuel_type": "Petrol / CNG", "mileage": "24.39 kmpl",
+    "fuel_tank": "27 litres", "seating": 5, "body_type": "Hatchback", "rating": 4.0, "ai_class_label": "maruti_alto",
+    "features": ["SmartPlay Studio","Dual Airbags","ABS with EBD","Rear Parking Sensors","Digital Speedometer"],
+    "colors": ["Solid Fire Red","Silky Silver","Granite Grey","Superior White","Earth Gold"],
+    "pros": ["Most affordable car","Best-in-class mileage","Easy to drive","CNG option"], "cons": ["Very basic features","Small cabin","Poor safety rating"], "images": []
+  },
+  {
+    "name": "Hyundai Creta", "slug": "hyundai-creta", "brand": "Hyundai", "segment": "Compact SUV", "year": 2024,
+    "price_min": 1100000, "price_max": 2000000, "engine": "1.5L Turbo GDi Petrol / 1.5L CRDi Diesel", "power": "158 bhp @ 5500 rpm",
+    "torque": "253 Nm @ 1500-3500 rpm", "transmission": "6-Speed MT / 7-Speed DCT / IVT", "fuel_type": "Petrol / Diesel", "mileage": "17.4 kmpl",
+    "fuel_tank": "50 litres", "seating": 5, "body_type": "SUV", "rating": 4.5, "ai_class_label": "hyundai_creta",
+    "features": ["Panoramic Sunroof","ADAS Level 2","10.25-inch Touchscreen","Bose Audio","Ventilated Seats","Digital Cluster","360 Camera","6 Airbags","Connected Car Tech"],
+    "colors": ["Abyss Black","Atlas White","Fiery Red","Titan Grey","Typhoon Silver","Ranger Khaki"],
+    "pros": ["Premium interiors","ADAS features","Multiple powertrain options","Strong resale"], "cons": ["Expensive top variants","Average rear legroom","Turbo only in top trims"], "images": []
+  },
+  {
+    "name": "Hyundai Venue", "slug": "hyundai-venue", "brand": "Hyundai", "segment": "Sub-Compact SUV", "year": 2024,
+    "price_min": 790000, "price_max": 1370000, "engine": "1.2L Kappa Petrol / 1.0L Turbo GDi", "power": "118 bhp @ 6000 rpm",
+    "torque": "172 Nm @ 1500-4000 rpm", "transmission": "6-Speed MT / 7-Speed DCT / IMT", "fuel_type": "Petrol", "mileage": "18.1 kmpl",
+    "fuel_tank": "45 litres", "seating": 5, "body_type": "SUV", "rating": 4.2, "ai_class_label": "hyundai_venue",
+    "features": ["8-inch Touchscreen","Connected Car Tech","Sunroof","Wireless Charging","LED Headlamps","Rear Camera","6 Airbags"],
+    "colors": ["Denim Blue","Phantom Black","Polar White","Fiery Red","Titan Grey","Typhoon Silver"],
+    "pros": ["Compact city SUV","Turbo option","Feature loaded","Good build quality"], "cons": ["Cramped rear seat","No diesel","Firm ride"], "images": []
+  },
+  {
+    "name": "Hyundai i20", "slug": "hyundai-i20", "brand": "Hyundai", "segment": "Premium Hatchback", "year": 2024,
+    "price_min": 710000, "price_max": 1160000, "engine": "1.2L Kappa Petrol / 1.0L Turbo GDi", "power": "118 bhp @ 6000 rpm",
+    "torque": "172 Nm @ 1500-4000 rpm", "transmission": "5-Speed MT / IVT / 7-Speed DCT", "fuel_type": "Petrol", "mileage": "20.35 kmpl",
+    "fuel_tank": "37 litres", "seating": 5, "body_type": "Hatchback", "rating": 4.3, "ai_class_label": "hyundai_i20",
+    "features": ["10.25-inch Touchscreen","Bose Audio","Sunroof","BlueLink Connected","Digital Cluster","Wireless Charging","6 Airbags"],
+    "colors": ["Starry Night","Polar White","Typhoon Silver","Fiery Red","Titan Grey","Amazon Grey"],
+    "pros": ["Premium feel","Feature loaded","Turbo fun","Spacious"], "cons": ["Pricey top trim","No diesel","CVT sluggish"], "images": []
+  },
+  {
+    "name": "Tata Nexon", "slug": "tata-nexon", "brand": "Tata", "segment": "Compact SUV", "year": 2024,
+    "price_min": 800000, "price_max": 1500000, "engine": "1.2L Turbo Revotron / 1.5L Revotorq Diesel", "power": "118 bhp @ 5500 rpm",
+    "torque": "170 Nm @ 1750-4000 rpm", "transmission": "6-Speed MT / 6-Speed AMT", "fuel_type": "Petrol / Diesel", "mileage": "17.4 kmpl",
+    "fuel_tank": "44 litres", "seating": 5, "body_type": "SUV", "rating": 4.4, "ai_class_label": "tata_nexon",
+    "features": ["10.25-inch Touchscreen","Ventilated Seats","Sunroof","360 Camera","Air Purifier","6 Airbags","Connected Car","iRA","Wireless Charging"],
+    "colors": ["Fearless Purple","Creative Ocean","Daytona Grey","Flame Red","Pure Grey","Calgary White"],
+    "pros": ["5-star safety","Diesel option","Feature rich","Good build quality"], "cons": ["AMT not smooth","Boot space average","NVH could be better"], "images": []
+  },
+  {
+    "name": "Tata Punch", "slug": "tata-punch", "brand": "Tata", "segment": "Micro SUV", "year": 2024,
+    "price_min": 600000, "price_max": 1000000, "engine": "1.2L Revotron Petrol", "power": "86 bhp @ 6000 rpm",
+    "torque": "115 Nm @ 3300 rpm", "transmission": "5-Speed MT / AMT", "fuel_type": "Petrol / CNG", "mileage": "20.09 kmpl",
+    "fuel_tank": "37 litres", "seating": 5, "body_type": "SUV", "rating": 4.2, "ai_class_label": "tata_punch",
+    "features": ["7-inch Touchscreen","Projector Headlamps","Rain Sensing Wipers","Rear Parking Camera","Dual Airbags","ABS EBD","iRA"],
+    "colors": ["Atomic Orange","Tornado Blue","Daytona Grey","Orcus White","Meteor Bronze","Calypso Red"],
+    "pros": ["5-star safety","Good ground clearance","Stylish design","Affordable"], "cons": ["Underpowered","No diesel","AMT jerky"], "images": []
+  },
+  {
+    "name": "Tata Harrier", "slug": "tata-harrier", "brand": "Tata", "segment": "Mid-Size SUV", "year": 2024,
+    "price_min": 1500000, "price_max": 2500000, "engine": "2.0L Kryotec Diesel", "power": "167 bhp @ 3750 rpm",
+    "torque": "350 Nm @ 1750-2500 rpm", "transmission": "6-Speed MT / 6-Speed AT", "fuel_type": "Diesel", "mileage": "16.35 kmpl",
+    "fuel_tank": "50 litres", "seating": 5, "body_type": "SUV", "rating": 4.3, "ai_class_label": "tata_harrier",
+    "features": ["ADAS","Panoramic Sunroof","JBL Audio","12.3-inch Touchscreen","Digital Cluster","360 Camera","Ventilated Seats","6 Airbags","Connected Car"],
+    "colors": ["Coral Red","Lunar White","Ash Grey","Daytona Grey","Oberon Black"],
+    "pros": ["Imposing road presence","ADAS","Strong diesel","Premium interiors"], "cons": ["No petrol option","Heavy steering","Third row missing"], "images": []
+  },
+  {
+    "name": "Tata Safari", "slug": "tata-safari", "brand": "Tata", "segment": "Full-Size SUV", "year": 2024,
+    "price_min": 1600000, "price_max": 2700000, "engine": "2.0L Kryotec Diesel", "power": "167 bhp @ 3750 rpm",
+    "torque": "350 Nm @ 1750-2500 rpm", "transmission": "6-Speed MT / 6-Speed AT", "fuel_type": "Diesel", "mileage": "14.5 kmpl",
+    "fuel_tank": "50 litres", "seating": 7, "body_type": "SUV", "rating": 4.3, "ai_class_label": "tata_safari",
+    "features": ["ADAS","Panoramic Sunroof","JBL Audio","Ventilated Seats","12.3-inch Touchscreen","Captain Seats Option","360 Camera","Connected Car"],
+    "colors": ["Royal Blue","Cosmic Gold","Lunar White","Oberon Black","Daytona Grey"],
+    "pros": ["7-seater with ADAS","Premium cabin","Strong diesel engine","Good road presence"], "cons": ["No petrol/AWD","Heavy to drive","Third row cramped"], "images": []
+  },
+  {
+    "name": "Kia Seltos", "slug": "kia-seltos", "brand": "Kia", "segment": "Compact SUV", "year": 2024,
+    "price_min": 1100000, "price_max": 2000000, "engine": "1.5L Turbo GDi / 1.5L CRDi Diesel", "power": "158 bhp @ 5500 rpm",
+    "torque": "253 Nm @ 1500-3500 rpm", "transmission": "6-Speed MT / 7-Speed DCT / IVT / 6-Speed AT", "fuel_type": "Petrol / Diesel", "mileage": "17.7 kmpl",
+    "fuel_tank": "50 litres", "seating": 5, "body_type": "SUV", "rating": 4.4, "ai_class_label": "kia_seltos",
+    "features": ["ADAS Level 2","10.25-inch Touchscreen","Bose Audio","Panoramic Sunroof","Ventilated Seats","360 Camera","6 Airbags","Connected Car"],
+    "colors": ["Intense Red","Gravity Grey","Glacier White","Aurora Black","Pewter Olive","Imperial Blue"],
+    "pros": ["Feature loaded","Multiple powertrains","Premium quality","ADAS"], "cons": ["Expensive top trim","Turbo only in top variant","Firm ride"], "images": []
+  },
+  {
+    "name": "Kia Sonet", "slug": "kia-sonet", "brand": "Kia", "segment": "Sub-Compact SUV", "year": 2024,
+    "price_min": 790000, "price_max": 1560000, "engine": "1.0L Turbo GDi / 1.5L CRDi Diesel", "power": "118 bhp @ 6000 rpm",
+    "torque": "172 Nm @ 1500-4000 rpm", "transmission": "6-Speed MT / 7-Speed DCT / 6-Speed iMT / 6-Speed AT", "fuel_type": "Petrol / Diesel", "mileage": "18.3 kmpl",
+    "fuel_tank": "45 litres", "seating": 5, "body_type": "SUV", "rating": 4.2, "ai_class_label": "kia_sonet",
+    "features": ["10.25-inch Touchscreen","Sunroof","Ventilated Seats","UVO Connected","Bose Audio","LED Headlamps","6 Airbags"],
+    "colors": ["Intense Red","Gravity Grey","Glacier White","Aurora Black","Imperial Blue","Clear White"],
+    "pros": ["Diesel AT option","Feature rich","Stylish design","Connected car tech"], "cons": ["Cramped rear","Stiff ride","Boot space small"], "images": []
+  },
+  {
+    "name": "Mahindra Thar", "slug": "mahindra-thar", "brand": "Mahindra", "segment": "Off-Road SUV", "year": 2024,
+    "price_min": 1100000, "price_max": 1800000, "engine": "2.0L mStallion Turbo Petrol / 2.2L mHawk Diesel", "power": "150 bhp @ 5000 rpm",
+    "torque": "320 Nm @ 1500-3000 rpm", "transmission": "6-Speed MT / 6-Speed AT", "fuel_type": "Petrol / Diesel", "mileage": "15.2 kmpl",
+    "fuel_tank": "57 litres", "seating": 4, "body_type": "Off-Road SUV", "rating": 4.4, "ai_class_label": "mahindra_thar",
+    "features": ["4x4 with Low Range","Touchscreen Infotainment","Roof Removable","Washable Interior","Cruise Control","Adventure Stats"],
+    "colors": ["Tango Red","Aquamarine","Galaxy Grey","Napoli Black","Everest White","Deep Forest"],
+    "pros": ["True off-roader","Iconic design","4x4 capability","Fun to drive"], "cons": ["Rough ride on road","Limited rear space","Not family friendly"], "images": []
+  },
+  {
+    "name": "Mahindra XUV700", "slug": "mahindra-xuv700", "brand": "Mahindra", "segment": "Mid-Size SUV", "year": 2024,
+    "price_min": 1399000, "price_max": 2700000, "engine": "2.0L mStallion Turbo Petrol / 2.2L mHawk Diesel", "power": "197 bhp @ 5000 rpm",
+    "torque": "380 Nm @ 1750-3000 rpm", "transmission": "6-Speed MT / 6-Speed AT", "fuel_type": "Petrol / Diesel", "mileage": "16.0 kmpl",
+    "fuel_tank": "60 litres", "seating": 7, "body_type": "SUV", "rating": 4.5, "ai_class_label": "mahindra_xuv700",
+    "features": ["ADAS","Panoramic Sunroof","Sony 3D Audio","10.25-inch Dual Screens","Smart Door Handles","Alexa Built-in","7 Airbags","AWD Option","Wireless Charging"],
+    "colors": ["Midnight Black","Everest White","Red Rage","Dazzling Silver","Electric Blue","Deep Forest"],
+    "pros": ["Best-in-class power","ADAS","Feature loaded","Value for money"], "cons": ["Long waiting period","Quality issues reported","Heavy steering"], "images": []
+  },
+  {
+    "name": "Mahindra Scorpio-N", "slug": "mahindra-scorpio-n", "brand": "Mahindra", "segment": "Mid-Size SUV", "year": 2024,
+    "price_min": 1400000, "price_max": 2400000, "engine": "2.0L mStallion Turbo Petrol / 2.2L mHawk Diesel", "power": "175 bhp @ 5000 rpm",
+    "torque": "370 Nm @ 1500-3000 rpm", "transmission": "6-Speed MT / 6-Speed AT", "fuel_type": "Petrol / Diesel", "mileage": "15.7 kmpl",
+    "fuel_tank": "57 litres", "seating": 7, "body_type": "SUV", "rating": 4.3, "ai_class_label": "mahindra_scorpio",
+    "features": ["ADAS","Sunroof","Sony Audio","Dual Zone AC","Terrain Modes","6 Airbags","4x4 Option","Connected Car"],
+    "colors": ["Dazzling Silver","Deep Forest","Everest White","Red Rage","Napoli Black","Royal Gold"],
+    "pros": ["Muscular design","4x4 capable","Powerful diesel","Good value"], "cons": ["Stiff third row","Average mileage","NVH levels high"], "images": []
+  },
+  {
+    "name": "Toyota Fortuner", "slug": "toyota-fortuner", "brand": "Toyota", "segment": "Full-Size SUV", "year": 2024,
+    "price_min": 3300000, "price_max": 5200000, "engine": "2.8L GD Diesel / 2.7L Petrol", "power": "201 bhp @ 3000-3400 rpm",
+    "torque": "500 Nm @ 1600-2800 rpm", "transmission": "6-Speed MT / 6-Speed AT", "fuel_type": "Petrol / Diesel", "mileage": "10.0 kmpl",
+    "fuel_tank": "80 litres", "seating": 7, "body_type": "SUV", "rating": 4.5, "ai_class_label": "toyota_fortuner",
+    "features": ["4x4 with Diff Lock","8-inch Touchscreen","JBL Audio","Connected Car","Wireless Charging","7 Airbags","Kick Sensor Tailgate","Cooled Seats"],
+    "colors": ["Super White","Attitude Black","Phantom Brown","Avant-Garde Bronze","Platinum White","Sparkling Black"],
+    "pros": ["Bulletproof reliability","Commanding presence","4x4 capability","Strong resale"], "cons": ["Very expensive","Poor city mileage","Dated infotainment"], "images": []
+  },
+  {
+    "name": "Toyota Innova Crysta", "slug": "toyota-innova-crysta", "brand": "Toyota", "segment": "MPV", "year": 2024,
+    "price_min": 1900000, "price_max": 2700000, "engine": "2.4L GD Diesel", "power": "148 bhp @ 3400 rpm",
+    "torque": "360 Nm @ 1200-3400 rpm", "transmission": "5-Speed MT / 6-Speed AT", "fuel_type": "Diesel", "mileage": "11.36 kmpl",
+    "fuel_tank": "55 litres", "seating": 7, "body_type": "MPV", "rating": 4.4, "ai_class_label": "toyota_innova",
+    "features": ["8-inch Touchscreen","Captain Seats","Auto AC","Rear Camera","Cruise Control","7 Airbags"],
+    "colors": ["Super White","Avant-Garde Bronze","Sparkling Black","Silver Metallic","Phantom Brown"],
+    "pros": ["Supreme comfort","Diesel reliability","Captain seats","Best chauffeur car"], "cons": ["No petrol","Expensive","Dated design"], "images": []
+  },
+  {
+    "name": "MG Hector", "slug": "mg-hector", "brand": "MG", "segment": "Mid-Size SUV", "year": 2024,
+    "price_min": 1400000, "price_max": 2200000, "engine": "1.5L Turbo Petrol / 2.0L Diesel", "power": "141 bhp @ 5000 rpm",
+    "torque": "250 Nm @ 1600-3600 rpm", "transmission": "6-Speed MT / CVT", "fuel_type": "Petrol / Diesel / Hybrid", "mileage": "14.5 kmpl",
+    "fuel_tank": "60 litres", "seating": 5, "body_type": "SUV", "rating": 4.1, "ai_class_label": "mg_hector",
+    "features": ["14-inch Touchscreen","Panoramic Sunroof","ADAS","Infinity Audio","Connected Car","Ventilated Seats","6 Airbags","Wireless Charging"],
+    "colors": ["Candy White","Glaze Red","Starry Black","Aurora Silver","Forest Green"],
+    "pros": ["Biggest touchscreen","Feature packed","Panoramic sunroof","Good road presence"], "cons": ["Heavy to drive","Average dynamics","After-sales network"], "images": []
+  },
+  {
+    "name": "Honda City", "slug": "honda-city", "brand": "Honda", "segment": "Mid-Size Sedan", "year": 2024,
+    "price_min": 1200000, "price_max": 1700000, "engine": "1.5L i-VTEC Petrol", "power": "119 bhp @ 6600 rpm",
+    "torque": "145 Nm @ 4300 rpm", "transmission": "6-Speed MT / CVT", "fuel_type": "Petrol", "mileage": "18.4 kmpl",
+    "fuel_tank": "40 litres", "seating": 5, "body_type": "Sedan", "rating": 4.4, "ai_class_label": "honda_city",
+    "features": ["8-inch Touchscreen","Honda Connect","LaneWatch Camera","Sunroof","LED Headlamps","6 Airbags","Alexa Built-in","Wireless Charging"],
+    "colors": ["Platinum White","Lunar Silver","Golden Brown","Radiant Red","Crystal Black"],
+    "pros": ["Spacious cabin","Reliable engine","Smooth CVT","Honda quality"], "cons": ["No turbo/diesel","Dated design","Average boot"], "images": []
+  }
+]

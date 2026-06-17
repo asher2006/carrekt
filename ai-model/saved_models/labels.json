@@ -1,0 +1,25 @@
+{
+  "labels": [
+    "honda_city",
+    "hyundai_creta",
+    "hyundai_i20",
+    "hyundai_venue",
+    "kia_seltos",
+    "kia_sonet",
+    "mahindra_scorpio",
+    "mahindra_thar",
+    "mahindra_xuv700",
+    "maruti_alto",
+    "maruti_baleno",
+    "maruti_brezza",
+    "maruti_swift",
+    "mg_hector",
+    "tata_harrier",
+    "tata_nexon",
+    "tata_punch",
+    "tata_safari",
+    "toyota_fortuner",
+    "toyota_innova"
+  ],
+  "image_size": 224
+}

@@ -1,0 +1,70 @@
+.similar-cars {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.similar-cars-header {
+  padding: var(--space-lg) var(--space-xl);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.similar-cars-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.similar-cars-grid {
+  padding: var(--space-lg) var(--space-xl);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+
+.similar-car-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.similar-car-card:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+.similar-car-emoji {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.similar-car-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.similar-car-price {
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  font-family: var(--font-mono);
+}
+
+.similar-car-segment {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}

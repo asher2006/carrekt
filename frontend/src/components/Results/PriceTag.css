@@ -1,0 +1,41 @@
+.price-tag {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(245, 158, 11, 0.02));
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.price-tag::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top right, rgba(245, 158, 11, 0.05), transparent 60%);
+  pointer-events: none;
+}
+
+.price-tag-label {
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  position: relative;
+}
+
+.price-tag-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.price-tag-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+  position: relative;
+}

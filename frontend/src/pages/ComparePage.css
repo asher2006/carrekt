@@ -1,0 +1,135 @@
+.compare-page {
+  padding: var(--space-2xl) 0 var(--space-3xl);
+}
+
+.compare-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.compare-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+}
+
+.compare-header p {
+  color: var(--text-secondary);
+}
+
+/* Selector */
+.compare-selector {
+  display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.compare-slot {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.compare-slot select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast);
+}
+
+.compare-slot select:focus {
+  border-color: var(--accent-blue);
+}
+
+.compare-slot option {
+  background: var(--bg-card);
+}
+
+.compare-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+}
+
+/* Compare Table */
+.compare-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+}
+
+.compare-table th,
+.compare-table td {
+  padding: var(--space-md) var(--space-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.compare-table th {
+  background: var(--bg-secondary);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+}
+
+.compare-table th:first-child {
+  width: 140px;
+  color: var(--text-secondary);
+}
+
+.compare-table td:first-child {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+.compare-table td {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.compare-table tr:hover td {
+  background: var(--bg-card-hover);
+}
+
+.compare-car-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.compare-car-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+}
+
+.compare-car-price {
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+}
+
+.compare-empty {
+  text-align: center;
+  padding: var(--space-3xl);
+  color: var(--text-muted);
+}

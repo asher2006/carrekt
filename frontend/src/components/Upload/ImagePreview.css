@@ -1,0 +1,99 @@
+.image-preview {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.image-preview-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 18px 56px rgba(0, 0, 0, 0.32);
+}
+
+.image-preview-img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-preview-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  background: linear-gradient(to top, rgba(10, 10, 15, 0.95) 0%, rgba(10, 10, 15, 0.6) 60%, transparent 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  backdrop-filter: blur(2px);
+}
+
+.image-preview-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.image-preview-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.image-preview-size {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.image-preview-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.image-preview-remove {
+  padding: 0.5rem 1rem;
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--accent-red);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.image-preview-remove:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+.image-preview-submit {
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, var(--accent-teal), #0f766e);
+  color: #071016;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.image-preview-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 28px var(--accent-teal-glow);
+}
+
+.image-preview-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}

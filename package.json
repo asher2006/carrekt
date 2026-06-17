@@ -1,0 +1,18 @@
+{
+  "name": "carrecog",
+  "version": "1.0.0",
+  "description": "AI-Powered Indian Car Recognition Web Application",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --names \"FRONTEND,BACKEND,AI\" --prefix-colors \"cyan,yellow,magenta\" \"npm run dev:frontend\" \"npm run dev:backend\" \"npm run dev:ai\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:ai": "cd ai-model && ./env/bin/python main.py",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../ai-model && pip install -r requirements.txt",
+    "seed": "cd backend && node data/seed.js",
+    "seed:mongo": "cd backend && npm run seed:mongo"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,112 @@
+.feature-list {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.feature-list-header {
+  padding: var(--space-lg) var(--space-xl);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.feature-list-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.feature-list-grid {
+  padding: var(--space-lg) var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.feature-item:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.feature-check {
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+/* Pros & Cons */
+.pros-cons {
+  padding: var(--space-lg) var(--space-xl);
+  border-top: 1px solid var(--border-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.pros-title,
+.cons-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pros-title { color: var(--accent-green); }
+.cons-title { color: var(--accent-red); }
+
+.pros-list,
+.cons-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pros-list li,
+.cons-list li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.pros-list li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+.cons-list li::before {
+  content: '−';
+  position: absolute;
+  left: 0;
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .feature-list-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pros-cons {
+    grid-template-columns: 1fr;
+  }
+}
