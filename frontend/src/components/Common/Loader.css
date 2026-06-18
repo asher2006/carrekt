@@ -3,13 +3,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--space-3xl);
-  gap: var(--space-lg);
-  background: rgba(5, 6, 8, 0.45);
+  padding: 3rem;
+  gap: 1rem;
+  background: rgba(10, 14, 23, 0.5);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(148, 163, 184, 0.08);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
 }
 
@@ -27,15 +27,15 @@
 }
 
 .loader-ring-outer {
-  border-top-color: var(--metal-gold);
-  border-left-color: rgba(219, 185, 116, 0.1);
+  border-top-color: var(--accent-primary);
+  border-left-color: rgba(59, 130, 246, 0.1);
   animation: spin-slow 1.2s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
 }
 
 .loader-ring-inner {
   inset: 8px;
-  border-bottom-color: var(--accent-green);
-  border-right-color: rgba(99, 213, 151, 0.1);
+  border-bottom-color: var(--accent-cyan);
+  border-right-color: rgba(34, 211, 238, 0.1);
   animation: spin-slow 0.8s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite reverse;
 }
 
@@ -46,19 +46,18 @@
   width: 8px;
   height: 8px;
   margin: -4px;
-  background: var(--metal-gold);
+  background: var(--accent-primary);
   border-radius: 50%;
   animation: pulse-ring 1.5s ease-in-out infinite;
-  box-shadow: 0 0 10px rgba(219, 185, 116, 0.6);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
 }
 
 .loader-text {
   font-size: 1rem;
   font-weight: 700;
   font-family: var(--font-display);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #fffaf0;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
   margin-top: 0.5rem;
 }
 
@@ -74,15 +73,15 @@
   width: 180px;
   height: 4px;
   background: rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius-full);
+  border-radius: 999px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
 .loader-progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, var(--metal-gold), var(--accent-green));
-  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-cyan));
+  border-radius: 999px;
   animation: shimmer-bar 2s linear infinite;
   background-size: 200% 100%;
   width: 70%;
@@ -102,7 +101,7 @@
   50% {
     transform: scale(1.25);
     opacity: 1;
-    box-shadow: 0 0 15px rgba(219, 185, 116, 0.85);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.85);
   }
 }
 
@@ -114,4 +113,3 @@
     background-position: -100% 0%;
   }
 }
-
