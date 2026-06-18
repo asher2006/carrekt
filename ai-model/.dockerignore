@@ -1,0 +1,8 @@
+venv/
+env/
+.training_cache/
+dataset/
+__pycache__/
+*.pyc
+.env
+.git
