@@ -32,7 +32,12 @@ const requireAuthClient = (res) => {
 };
 
 const shouldUseLocalFallback = (error) => (
-  !authClient || error?.message === 'fetch failed' || error?.name === 'AuthRetryableFetchError'
+  !authClient ||
+  error?.message === 'fetch failed' ||
+  error?.name === 'AuthRetryableFetchError' ||
+  error?.status === 429 ||
+  error?.message?.includes('Too many authentication attempts') ||
+  error?.message?.includes('rate limit')
 );
 
 const sendLocalFallback = (res, data, status = 200) => {
