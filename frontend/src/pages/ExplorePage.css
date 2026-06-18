@@ -9,14 +9,10 @@
   grid-template-columns: minmax(0, 1fr) 240px;
   gap: 1.5rem;
   align-items: stretch;
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  border-radius: 30px;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.005) 50%, rgba(10, 14, 23, 0.94)),
-    rgba(15, 23, 42, 0.5);
-  box-shadow:
-    0 24px 70px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-color);
+  border-radius: 0px;
+  background: var(--bg-secondary);
+  box-shadow: none;
   padding: clamp(1.25rem, 3vw, 2.25rem);
   backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);
@@ -40,9 +36,9 @@
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 999px;
-  background: rgba(59, 130, 246, 0.06);
+  border: 1px solid rgba(229, 184, 59, 0.2);
+  border-radius: 0px;
+  background: rgba(229, 184, 59, 0.05);
   padding: 0.5rem 0.85rem;
   color: var(--accent-primary);
 }
@@ -69,21 +65,19 @@
 .catalog-signal-card {
   display: grid;
   align-content: center;
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  border-radius: 22px;
-  background:
-    radial-gradient(circle at top, rgba(59, 130, 246, 0.08), transparent 54%),
-    rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.015);
   padding: 1.25rem;
 }
 
 .catalog-signal-card strong {
   display: block;
   margin-top: 0.55rem;
-  color: var(--text-primary);
+  color: var(--accent-primary);
   font-size: 3.5rem;
   line-height: 0.9;
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
   font-weight: 800;
 }
 
@@ -107,11 +101,9 @@
 .featured-catalog-card,
 .catalog-card,
 .catalog-empty {
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.005)),
-    rgba(15, 23, 42, 0.5);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  box-shadow: none;
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
 }
@@ -120,7 +112,7 @@
   position: sticky;
   top: 102px;
   height: fit-content;
-  border-radius: 24px;
+  border-radius: 0px;
   padding: 1.25rem;
 }
 
@@ -166,26 +158,25 @@
 .catalog-filter-stack select {
   width: 100%;
   min-height: 48px;
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.02);
   color: var(--text-primary);
   padding: 0 0.9rem;
   outline: none;
   font-size: 0.9rem;
-  transition: border-color 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+  transition: border-color 200ms ease, background-color 200ms ease;
 }
 
 .catalog-filter-stack select option {
-  background: #111827;
+  background: var(--bg-primary);
   color: var(--text-primary);
 }
 
 .catalog-filter-stack input:focus,
 .catalog-filter-stack select:focus {
-  border-color: rgba(59, 130, 246, 0.5);
-  background: rgba(59, 130, 246, 0.04);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+  border-color: var(--accent-primary);
+  background: rgba(229, 184, 59, 0.03);
 }
 
 .catalog-search {
@@ -209,8 +200,8 @@
   width: 100%;
   min-height: 48px;
   margin-top: 1rem;
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  border-radius: 0px;
   background: rgba(255, 255, 255, 0.03);
   color: var(--text-primary);
   font-weight: 600;
@@ -223,8 +214,9 @@
 
 .catalog-clear:hover {
   transform: translateY(-2px);
-  border-color: rgba(59, 130, 246, 0.32);
-  background: rgba(59, 130, 246, 0.06);
+  border-color: var(--accent-primary);
+  background: rgba(229, 184, 59, 0.05);
+  color: var(--accent-primary);
 }
 
 /* ── Results bar ── */
@@ -238,7 +230,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  border-radius: 20px;
+  border-radius: 0px;
   padding: 0.85rem 1.25rem;
 }
 
@@ -255,18 +247,17 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid rgba(16, 185, 129, 0.18);
-  border-radius: 999px;
-  background: rgba(16, 185, 129, 0.07);
+  border: 1px solid rgba(229, 184, 59, 0.18);
+  border-radius: 0px;
+  background: rgba(229, 184, 59, 0.05);
   padding: 0.5rem 0.85rem;
-  color: var(--text-secondary);
+  color: var(--accent-primary);
   font-size: 0.8rem;
   font-family: var(--font-mono);
 }
 
 .catalog-results-bar svg {
-  color: var(--accent-green);
-  filter: drop-shadow(0 0 3px rgba(16, 185, 129, 0.3));
+  color: var(--accent-primary);
 }
 
 /* ── Featured card ── */
@@ -279,19 +270,8 @@
   overflow: hidden;
   position: relative;
   margin-top: 1rem;
-  border-radius: 24px;
+  border-radius: 0px;
   padding: 1.5rem;
-}
-
-.featured-catalog-card::after {
-  content: '';
-  position: absolute;
-  inset: auto -8% -90% auto;
-  width: 380px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.12), transparent 65%);
-  pointer-events: none;
 }
 
 .featured-catalog-card p {
@@ -334,30 +314,29 @@
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  border-radius: 999px;
+  border-radius: 0px;
   padding: 0.65rem 1rem;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
               border-color 200ms ease,
-              background-color 200ms ease,
-              filter 200ms ease;
+              background-color 200ms ease;
 }
 
 .featured-actions a:first-child,
 .catalog-card__actions a:first-child {
-  color: #ffffff;
+  color: #0a0b0c;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 45%),
-    linear-gradient(135deg, #EF4444, #DC2626 55%, #B91C1C);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.25), transparent 45%),
+    linear-gradient(135deg, var(--accent-primary), var(--accent-primary-dim));
 }
 
 .featured-actions a:last-child,
 .catalog-card__actions a:last-child {
-  border: 1px solid rgba(59, 130, 246, 0.18);
-  color: var(--accent-blue);
-  background: rgba(59, 130, 246, 0.06);
+  border: 1px solid rgba(229, 184, 59, 0.22);
+  color: var(--accent-primary);
+  background: rgba(229, 184, 59, 0.05);
 }
 
 .featured-actions a:hover,
@@ -367,14 +346,13 @@
 
 .featured-actions a:first-child:hover,
 .catalog-card__actions a:first-child:hover {
-  filter: brightness(1.08);
-  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.2);
+  background: var(--accent-primary);
 }
 
 .featured-actions a:last-child:hover,
 .catalog-card__actions a:last-child:hover {
-  background: rgba(59, 130, 246, 0.1);
-  border-color: rgba(59, 130, 246, 0.32);
+  background: rgba(229, 184, 59, 0.1);
+  border-color: var(--accent-primary);
 }
 
 /* ── Catalog grid ── */
@@ -389,24 +367,17 @@
 .catalog-card {
   display: grid;
   gap: 1.15rem;
-  border-radius: 24px;
+  border-radius: 0px;
   padding: 1.25rem;
   transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
               border-color 300ms ease,
-              background-color 300ms ease,
-              box-shadow 300ms ease;
+              background-color 300ms ease;
 }
 
 .catalog-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(59, 130, 246, 0.24);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.005)),
-    rgba(15, 23, 42, 0.6);
-  box-shadow:
-    0 20px 45px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08),
-    0 0 20px rgba(59, 130, 246, 0.05);
+  border-color: var(--accent-primary);
+  background: var(--bg-secondary);
 }
 
 .catalog-card__top {
@@ -430,8 +401,8 @@
 
 .catalog-card__top > span {
   height: fit-content;
-  border: 1px solid rgba(148, 163, 184, 0.1);
-  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0px;
   padding: 0.4rem 0.65rem;
   color: var(--text-secondary);
   font-size: 0.74rem;
@@ -443,14 +414,13 @@
   min-height: 80px;
   align-items: center;
   justify-content: space-between;
-  border-radius: 18px;
+  border-radius: 0px;
   background:
-    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(59, 130, 246, 0.02) 1px, transparent 1px),
-    radial-gradient(circle at 24% 50%, rgba(59, 130, 246, 0.06), transparent 34%),
-    rgba(255, 255, 255, 0.02);
-  background-size: 26px 26px, 26px 26px, auto, auto;
-  border: 1px solid rgba(148, 163, 184, 0.06);
+    linear-gradient(90deg, rgba(229, 184, 59, 0.02) 1px, transparent 1px),
+    linear-gradient(rgba(229, 184, 59, 0.01) 1px, transparent 1px),
+    rgba(255, 255, 255, 0.01);
+  background-size: 26px 26px, 26px 26px;
+  border: 1px solid var(--border-color);
   padding: 0.9rem;
 }
 
@@ -476,8 +446,8 @@
   right: 11px;
   bottom: 8px;
   height: 26px;
-  border-radius: 18px 24px 10px 10px;
-  background: linear-gradient(180deg, #334155, #0F172A);
+  border-radius: 0px;
+  background: linear-gradient(180deg, var(--accent-primary-dim), #0a0b0c);
 }
 
 .mini-car::after {
@@ -485,8 +455,8 @@
   top: 0;
   width: 46px;
   height: 25px;
-  border-radius: 32px 32px 4px 4px;
-  background: linear-gradient(180deg, #1E293B, #0F172A);
+  border-radius: 0px;
+  background: linear-gradient(180deg, var(--accent-primary), #0a0b0c);
 }
 
 .mini-car span {
@@ -495,8 +465,8 @@
   bottom: 0;
   height: 14px;
   background:
-    radial-gradient(circle at 10px 7px, #0A0E17 0 6px, transparent 7px),
-    radial-gradient(circle at calc(100% - 10px) 7px, #0A0E17 0 6px, transparent 7px);
+    radial-gradient(circle at 10px 7px, var(--accent-primary) 0 4px, transparent 5px),
+    radial-gradient(circle at calc(100% - 10px) 7px, var(--accent-primary) 0 4px, transparent 5px);
 }
 
 .catalog-card__chips {
@@ -506,9 +476,9 @@
 }
 
 .catalog-card__chips span {
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border-color);
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.02);
   padding: 0.45rem 0.65rem;
   color: var(--text-secondary);
   font-size: 0.74rem;
@@ -522,9 +492,9 @@
 
 .catalog-card__specs > div {
   min-height: 82px;
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.01);
   padding: 0.85rem;
 }
 
@@ -546,7 +516,7 @@
 
 .catalog-empty {
   margin-top: 1rem;
-  border-radius: 24px;
+  border-radius: 0px;
   padding: 3rem 1.5rem;
   text-align: center;
 }

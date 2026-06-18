@@ -13,18 +13,16 @@
 
 .auth-copy-panel,
 .auth-form-panel {
-  border: 1px solid rgba(148, 163, 184, 0.1);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
-    rgba(15, 23, 42, 0.84);
-  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.46), inset 0 1px rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  box-shadow: none;
   backdrop-filter: blur(22px);
 }
 
 .auth-copy-panel {
   overflow: hidden;
   position: relative;
-  border-radius: 34px;
+  border-radius: 0px;
   padding: clamp(1.5rem, 4vw, 3rem);
 }
 
@@ -35,11 +33,10 @@
   bottom: -7rem;
   width: 420px;
   aspect-ratio: 1;
-  border: 1px solid rgba(59, 130, 246, 0.18);
+  border: 1px solid rgba(229, 184, 59, 0.1);
   border-radius: 50%;
   background:
-    radial-gradient(circle, transparent 42%, rgba(59, 130, 246, 0.08) 43%, transparent 45%),
-    conic-gradient(from 120deg, rgba(34, 211, 238, 0.2), transparent 32%, rgba(59, 130, 246, 0.2), transparent 68%);
+    radial-gradient(circle, transparent 42%, rgba(229, 184, 59, 0.04) 43%, transparent 45%);
   pointer-events: none;
 }
 
@@ -47,9 +44,9 @@
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  border: 1px solid rgba(59, 130, 246, 0.24);
-  border-radius: 999px;
-  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(229, 184, 59, 0.2);
+  border-radius: 0px;
+  background: rgba(229, 184, 59, 0.05);
   padding: 0.62rem 0.88rem;
   color: var(--accent-primary);
   font-family: var(--font-mono);
@@ -89,9 +86,9 @@
 
 .auth-feature-grid > div,
 .auth-flow-card {
-  border: 1px solid rgba(148, 163, 184, 0.1);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border-color);
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.015);
   padding: 1.1rem;
 }
 
@@ -134,11 +131,11 @@
 .auth-flow-card svg {
   flex: 0 0 auto;
   margin-top: 0.15rem;
-  color: var(--accent-green);
+  color: var(--accent-primary);
 }
 
 .auth-form-panel {
-  border-radius: 32px;
+  border-radius: 0px;
   padding: clamp(1.25rem, 3vw, 2rem);
 }
 
@@ -160,7 +157,7 @@
 .auth-error-message,
 .auth-success-message {
   margin-bottom: 1rem;
-  border-radius: 22px;
+  border-radius: 0px;
   padding: 1rem;
   font-size: 0.9rem;
   line-height: 1.55;
@@ -224,13 +221,13 @@
 
 .auth-form-fields input {
   min-height: 52px;
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.02);
   padding: 0 1rem;
   color: var(--text-primary);
   font-size: 1rem;
-  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+  transition: border-color 180ms ease, background 180ms ease;
 }
 
 .auth-form-fields input::placeholder {
@@ -238,9 +235,8 @@
 }
 
 .auth-form-fields input:focus {
-  border-color: rgba(59, 130, 246, 0.5);
-  background: rgba(59, 130, 246, 0.04);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+  border-color: var(--accent-primary);
+  background: rgba(229, 184, 59, 0.03);
   outline: none;
 }
 
@@ -249,26 +245,26 @@
 .auth-form-fields input:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--text-primary);
   caret-color: var(--text-primary);
-  box-shadow: 0 0 0 1000px #1E293B inset, 0 0 0 3px rgba(59, 130, 246, 0.12);
-  border-color: rgba(59, 130, 246, 0.36);
+  box-shadow: 0 0 0 1000px var(--bg-secondary) inset;
+  border-color: var(--accent-primary);
   transition: background-color 9999s ease-in-out 0s;
 }
 
 .auth-submit {
   min-height: 54px;
-  border-radius: 999px;
+  border-radius: 0px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 44%),
-    linear-gradient(135deg, #EF4444, #DC2626 52%, #B91C1C);
-  color: #ffffff;
+    linear-gradient(180deg, rgba(255, 255, 255, 0.25), transparent 44%),
+    linear-gradient(135deg, var(--accent-primary), var(--accent-primary-dim));
+  color: #0a0b0c;
   font-weight: 700;
-  box-shadow: 0 18px 40px rgba(239, 68, 68, 0.2);
-  transition: transform 180ms ease, filter 180ms ease, opacity 180ms ease;
+  box-shadow: none;
+  transition: transform 180ms ease, opacity 180ms ease;
 }
 
 .auth-submit:hover:not(:disabled) {
   transform: translateY(-2px);
-  filter: brightness(1.06);
+  background: var(--accent-primary);
 }
 
 .auth-submit:disabled {

@@ -76,10 +76,10 @@ const UploadPanel = ({ onFileSelect, onCameraOpen }) => {
         <div className="upload-deck-icon">
           <UploadCloud size={28} />
         </div>
-        <p className="eyebrow upload-deck-eyebrow">Image Intake Bay</p>
-        <h3>Drag & Drop Car Image</h3>
+        <p className="eyebrow upload-deck-eyebrow">IMAGE SOURCE</p>
+        <h3>Select Vehicle Image</h3>
         <p className="upload-deck-copy">
-          Exterior vehicle snapshots resolve into pricing, telemetry specs, and side-by-side rivals matrices.
+          Upload an exterior photo of a vehicle to classify its brand and model and extract technical specifications.
         </p>
 
         <div className="upload-deck-actions">
@@ -88,7 +88,7 @@ const UploadPanel = ({ onFileSelect, onCameraOpen }) => {
             className="button-primary-glow"
             onClick={() => fileInputRef.current?.click()}
           >
-            Upload Image
+            Browse Files
             <ArrowRight size={15} />
           </button>
           <button
@@ -97,7 +97,7 @@ const UploadPanel = ({ onFileSelect, onCameraOpen }) => {
             onClick={onCameraOpen}
           >
             <Camera size={15} />
-            Use Camera
+            Camera Scan
           </button>
         </div>
       </div>
@@ -107,7 +107,7 @@ const UploadPanel = ({ onFileSelect, onCameraOpen }) => {
 
 export default function HomePage() {
   const [selectedFile, setSelectedFile] = useState(null);
-  const [intakeOpen, setIntakeOpen] = useState(false);
+  const [intakeOpen, setIntakeOpen] = useState(true);
   const [cameraOpen, setCameraOpen] = useState(false);
   const [cameraResult, setCameraResult] = useState(null);
   const { prediction, carDetails, loading, error, predict, reset } = usePrediction();
@@ -181,18 +181,18 @@ export default function HomePage() {
               <div className="hero-left-col">
                 <div className="hero-status">
                   <span className="live-pulsing-bulb" />
-                  PREMIUM ACCESS GRANTED
+                  AI CLASSIFIER ACTIVE
                 </div>
 
                 {!intakeOpen ? (
                   <>
                     <h1>
-                      The Vanguard of <br />
-                      <span>Automotive Intelligence.</span>
+                      AI-Powered <br />
+                      <span>Vehicle Classifier.</span>
                     </h1>
                     
                     <p className="hero-copy">
-                      Elevating vehicle recognition to an editorial standard. Our neural architecture processes reality with the precision of a master watchmaker, delivering deep-tissue telemetry in real-time.
+                      Identify vehicle brand, model, and year instantly from any photo. This platform leverages a convolutional neural network trained on over 50,000 images to classify 250+ vehicle types with sub-second latency.
                     </p>
 
                     <div className="hero-actions">
@@ -201,21 +201,21 @@ export default function HomePage() {
                         className="button-primary-glow"
                         onClick={() => setIntakeOpen(true)}
                       >
-                        Initialize HUD
+                        Start Scanner
                         <ArrowRight size={15} />
                       </button>
                       <Link
                         to="/explore"
                         className="button-secondary-hologram"
                       >
-                        Read Specifications
+                        Browse Catalog
                       </Link>
                     </div>
                   </>
                 ) : (
                   <>
-                    <h2 className="intake-title">Intake Terminal</h2>
-                    <p className="intake-copy">Select an image or activate device camera scanner to run diagnostics.</p>
+                    <h2 className="intake-title">Vehicle Scanner</h2>
+                    <p className="intake-copy">Upload an image or launch your webcam to begin AI classification.</p>
                     
                     {/* Intake Panel placed prominently in Left Hero Column */}
                     <div className="hero-intake-wrapper">

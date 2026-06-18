@@ -93,9 +93,9 @@ const ComparePage = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-6 pb-16 pt-8">
-      <section className="rounded-[32px] border border-white/5 bg-gradient-to-b from-white/[0.04] to-white/[0.005] px-6 py-10 sm:px-8 shadow-2xl backdrop-blur-3xl">
+      <section className="rounded-none border border-[var(--border-color)] bg-[var(--bg-secondary)] px-6 py-10 sm:px-8 shadow-none backdrop-blur-3xl">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/[0.06] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.24em] text-blue-400">
+          <div className="inline-flex items-center gap-2 rounded-none border border-[rgba(229,184,59,0.2)] bg-[rgba(229,184,59,0.05)] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.24em] text-[var(--accent-primary)]">
             <Scale size={14} />
             Decision support
           </div>
@@ -106,17 +106,17 @@ const ComparePage = () => {
         </div>
       </section>
 
-      <section className="mt-8 rounded-[28px] border border-white/5 bg-white/[0.015] p-6 backdrop-blur-3xl shadow-xl">
+      <section className="mt-8 rounded-none border border-[var(--border-color)] bg-[var(--bg-secondary)] p-6 backdrop-blur-3xl shadow-none">
         {carsLoading ? (
           <Loader text="Loading comparison catalog..." subtext="Preparing available vehicles" />
         ) : (
           <>
             <div className="grid gap-4 lg:grid-cols-3">
               {selectedSlugs.map((slug, index) => (
-                <div key={`slot-${index}`} className="rounded-[22px] border border-white/5 bg-white/[0.015] p-4 hover:border-blue-500/20 transition-colors duration-300">
+                <div key={`slot-${index}`} className="rounded-none border border-[var(--border-color)] bg-[var(--bg-primary)] p-4 hover:border-[var(--accent-primary)]/40 transition-colors duration-300">
                   <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--text-muted)]">Vehicle {index + 1}</p>
                   <select
-                    className="mt-4 w-full rounded-xl border border-white/8 bg-[rgba(15,23,42,0.7)] px-4 py-3 text-sm text-white focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 outline-none transition-colors duration-300"
+                    className="mt-4 w-full rounded-none border border-[var(--border-color)] bg-[var(--bg-secondary)] px-4 py-3 text-sm text-white focus:border-[var(--accent-primary)] outline-none transition-colors duration-300"
                     value={slug}
                     onChange={(event) => handleSlotChange(index, event.target.value)}
                   >
@@ -134,7 +134,7 @@ const ComparePage = () => {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex flex-wrap gap-2">
                 {selectedCars.map((car) => (
-                  <span key={car.slug} className="inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/[0.03] px-4 py-1.5 text-xs text-white font-mono">
+                  <span key={car.slug} className="inline-flex items-center gap-2 rounded-none border border-[var(--border-color)] bg-white/[0.03] px-4 py-1.5 text-xs text-white font-mono">
                     {car.name}
                     <button
                       type="button"
@@ -147,8 +147,8 @@ const ComparePage = () => {
                   </span>
                 ))}
               </div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/[0.03] px-4 py-1.5 text-xs text-[var(--text-secondary)] font-mono">
-                <GitCompareArrows size={14} className="text-blue-400" />
+              <div className="inline-flex items-center gap-2 rounded-none border border-[var(--border-color)] bg-white/[0.03] px-4 py-1.5 text-xs text-[var(--text-secondary)] font-mono">
+                <GitCompareArrows size={14} className="text-[var(--accent-primary)]" />
                 {validSlugs.length < 2 ? 'Select at least 2 cars to compare' : `${validSlugs.length} cars selected`}
               </div>
             </div>
@@ -166,7 +166,7 @@ const ComparePage = () => {
         <motion.section
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-8 overflow-hidden rounded-[28px] border border-white/5 bg-gradient-to-b from-white/[0.03] to-white/[0.005] shadow-2xl backdrop-blur-3xl"
+          className="mt-8 overflow-hidden rounded-none border border-[var(--border-color)] bg-[var(--bg-secondary)] shadow-none backdrop-blur-3xl"
         >
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-white/5">
@@ -177,7 +177,7 @@ const ComparePage = () => {
                     <th key={car.slug} className="min-w-[240px] px-6 py-4 text-left">
                       <div>
                         <p className="text-base font-semibold text-white">{car.name}</p>
-                        <p className="mt-1 text-xs font-mono text-blue-400">{formatPriceRange(car.price_min, car.price_max)}</p>
+                        <p className="mt-1 text-xs font-mono text-[var(--accent-primary)]">{formatPriceRange(car.price_min, car.price_max)}</p>
                       </div>
                     </th>
                   ))}
@@ -211,17 +211,17 @@ const ComparePage = () => {
       )}
 
       {!comparisonLoading && validSlugs.length >= 2 && visibleCompareData.length === 0 && (
-        <div className="mt-8 rounded-[28px] border border-white/5 bg-white/[0.015] p-10 text-center">
+        <div className="mt-8 rounded-none border border-[var(--border-color)] bg-[var(--bg-secondary)] p-10 text-center">
           <p className="text-base font-semibold text-white">Comparison data is unavailable for this selection.</p>
           <p className="mt-2 text-xs text-[var(--text-secondary)]">Try another pair from the catalog to continue.</p>
         </div>
       )}
 
       {!carsLoading && validSlugs.length < 2 && (
-        <div className="mt-8 rounded-[28px] border border-dashed border-white/10 bg-white/[0.015] p-12 text-center shadow-lg">
+        <div className="mt-8 rounded-none border border-dashed border-[var(--border-color)] bg-[var(--bg-secondary)] p-12 text-center shadow-none">
           <p className="text-base font-semibold text-white">Start with at least two models</p>
           <p className="mt-2 text-xs text-[var(--text-secondary)]">The table will appear automatically once we have enough cars to compare.</p>
-          <MoveRight className="mx-auto mt-6 text-blue-400 animate-pulse" size={24} />
+          <MoveRight className="mx-auto mt-6 text-[var(--accent-primary)] animate-pulse" size={24} />
         </div>
       )}
     </div>

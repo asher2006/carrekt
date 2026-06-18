@@ -35,9 +35,9 @@
 .compare-slot select {
   width: 100%;
   padding: 0.75rem 1rem;
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(18, 19, 21, 0.85);
   border: 1px solid var(--border-color);
-  border-radius: 18px;
+  border-radius: 0px;
   color: var(--text-primary);
   font-size: 0.95rem;
   transition: border-color 200ms ease;
@@ -48,7 +48,7 @@
 }
 
 .compare-slot option {
-  background: #111827;
+  background: var(--bg-primary);
 }
 
 .compare-btn {
@@ -60,14 +60,14 @@
 /* Compare Table */
 .compare-table-wrapper {
   overflow-x: auto;
-  border-radius: 24px;
+  border-radius: 0px;
   border: 1px solid var(--border-color);
 }
 
 .compare-table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(15, 23, 42, 0.5);
+  background: rgba(18, 19, 21, 0.5);
 }
 
 .compare-table th,
@@ -107,7 +107,7 @@
 }
 
 .compare-table tr:hover td {
-  background: rgba(59, 130, 246, 0.02);
+  background: rgba(229, 184, 59, 0.02);
 }
 
 .compare-car-header {

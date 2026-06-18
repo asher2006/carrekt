@@ -6,67 +6,67 @@ export default function StatsSection() {
     <div className="stats-container">
       <div className="stats-header">
         <div className="stats-header-left">
-          <span className="eyebrow">OPERATIONAL STANDARDS</span>
-          <h2>Precision Metrology</h2>
+          <span className="eyebrow">OPERATIONAL BENCHMARKS</span>
+          <h2>Model & Dataset Metrics</h2>
         </div>
         <div className="stats-header-right">
           <p>
-            Our performance metrics are measured against industry-leading benchmarks for sub-second analysis.
+            Key parameters validating classification accuracy, inference speed, and overall dataset scope.
           </p>
         </div>
       </div>
       
       <div className="stats-grid-three">
-        {/* Card 1: Recognition Density */}
+        {/* Card 1: Model Accuracy */}
         <div className="stats-card-premium">
           <div className="stats-card-icon">
             <TrendingUp size={20} />
           </div>
-          <h3>Recognition Density</h3>
+          <h3>Model Accuracy</h3>
           <div className="stats-metrics-rows">
             <div className="stats-metric-row">
-              <span>Confidence</span>
-              <strong>99.85%</strong>
+              <span>Top-1 Accuracy</span>
+              <strong>97.3%</strong>
             </div>
             <div className="stats-metric-row">
-              <span>Sample Size</span>
-              <strong>1.2M/day</strong>
+              <span>Validation Set</span>
+              <strong>525 images</strong>
             </div>
           </div>
         </div>
 
-        {/* Card 2: Throughput Rate */}
+        {/* Card 2: Inference Speed */}
         <div className="stats-card-premium">
           <div className="stats-card-icon">
             <Zap size={20} />
           </div>
-          <h3>Throughput Rate</h3>
+          <h3>Inference Speed</h3>
           <div className="stats-metrics-rows">
             <div className="stats-metric-row">
-              <span>Frame Latency</span>
-              <strong>4.2ms</strong>
+              <span>GPU Latency</span>
+              <strong>277ms</strong>
             </div>
             <div className="stats-metric-row">
-              <span>Packet Loss</span>
-              <strong>0.00%</strong>
+              <span>Throughput</span>
+              <strong>3.6 FPS</strong>
             </div>
           </div>
         </div>
 
-        {/* Card 3: Vault Security */}
+        {/* Card 3: Dataset Coverage */}
         <div className="stats-card-premium">
           <div className="stats-card-icon">
             <Shield size={20} />
           </div>
-          <h3>Vault Security</h3>
+          <h3>Dataset Coverage</h3>
           <div className="stats-metrics-rows">
             <div className="stats-metric-row">
-              <span>Encryption</span>
-              <strong>AES-256</strong>
+              <span>Unique Classes</span>
+              <strong>20 models</strong>
             </div>
             <div className="stats-metric-row">
-              <span>Uptime</span>
-              <strong>99.999%</strong>
+              <span>Total Dataset</span>
+              <strong>4,000 images</strong>
             </div>
           </div>
         </div>

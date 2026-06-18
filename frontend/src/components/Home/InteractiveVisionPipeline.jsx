@@ -94,23 +94,23 @@ export default function InteractiveVisionPipeline() {
 
         {/* Live Telemetry Overlay Box */}
         <div className="telemetry-overlay-box">
-          <span className="telemetry-header">LIVE_TELEMETRY</span>
+          <span className="telemetry-header">CLASSIFIER_LOGS</span>
           <div className="telemetry-table">
             <div className="telemetry-row table-hdr">
               <span>PARAMETER</span>
               <span>VALUE</span>
             </div>
             <div className="telemetry-row">
-              <span>VELOCITY_KPH</span>
-              <span>{phase === 'classified' ? '142.88' : '00.00'}</span>
+              <span>DETECTED_CLASS</span>
+              <span style={{ fontSize: '0.55rem' }}>{phase === 'classified' ? `${activeCar.brand} ${activeCar.model}` : 'DETECTING...'}</span>
             </div>
             <div className="telemetry-row">
-              <span>LATENCY_MS</span>
-              <span>{phase === 'classified' ? activeCar.latency.replace('ms', '') : '00.00'}</span>
+              <span>GPU_LATENCY</span>
+              <span>{phase === 'classified' ? activeCar.latency : '00ms'}</span>
             </div>
             <div className="telemetry-row">
-              <span>MODEL_CONF</span>
-              <span>{phase === 'classified' ? (activeCar.confidence / 100).toFixed(4) : '0.0000'}</span>
+              <span>MATCH_CONF</span>
+              <span>{phase === 'classified' ? `${activeCar.confidence}%` : '0.00%'}</span>
             </div>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function InteractiveVisionPipeline() {
           </div>
         )}
 
-        {/* Sync Active Overlay */}
+        {/* Scanner Active Overlay */}
         <div className="sync-overlay-box">
           <div className="sync-bar">
             <div
@@ -143,7 +143,7 @@ export default function InteractiveVisionPipeline() {
               }}
             />
           </div>
-          <span className="sync-label">SYNC_ACTIVE</span>
+          <span className="sync-label">SCANNER_ONLINE</span>
         </div>
       </div>
     </div>

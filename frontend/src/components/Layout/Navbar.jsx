@@ -6,10 +6,9 @@ import { useAuth } from '../../context/AuthContext';
 import './Navbar.css';
 
 const navItems = [
-  { to: '/', label: 'COLLECTION' },
-  { to: '/explore', label: 'METRICS' },
-  { to: '/compare', label: 'INTELLIGENCE' },
-  { to: '/archive', label: 'ARCHIVE' },
+  { to: '/', label: 'SCANNER' },
+  { to: '/explore', label: 'CATALOG' },
+  { to: '/compare', label: 'COMPARE' },
 ];
 
 const Navbar = () => {
@@ -33,17 +32,15 @@ const Navbar = () => {
         {/* Desktop Navigation with Sliding Pill */}
         <nav className="desktop-nav">
           {navItems.map((item) => {
-            // Treat /archive as /explore for active state mapping
-            const targetPath = item.to === '/archive' ? '/explore' : item.to;
             const isActive =
-              targetPath === '/'
+              item.to === '/'
                 ? currentPath === '/'
-                : currentPath.startsWith(targetPath);
+                : currentPath.startsWith(item.to);
 
             return (
               <Link
                 key={item.label}
-                to={item.to === '/archive' ? '/explore' : item.to}
+                to={item.to}
                 className={`nav-link-item ${isActive ? 'is-active' : ''}`}
               >
                 {isActive && (
@@ -97,16 +94,15 @@ const Navbar = () => {
         <div className="mobile-panel">
           <nav>
             {navItems.map((item) => {
-              const targetPath = item.to === '/archive' ? '/explore' : item.to;
               const isActive =
-                targetPath === '/'
+                item.to === '/'
                   ? currentPath === '/'
-                  : currentPath.startsWith(targetPath);
+                  : currentPath.startsWith(item.to);
 
               return (
                 <Link
                   key={item.label}
-                  to={item.to === '/archive' ? '/explore' : item.to}
+                  to={item.to}
                   className={`nav-link-item ${isActive ? 'is-active' : ''}`}
                   onClick={() => setMobileOpen(false)}
                 >

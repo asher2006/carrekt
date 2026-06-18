@@ -46,71 +46,50 @@ export default function SpecsDashboard({ car }) {
         <h3>Technical Telemetry</h3>
       </div>
 
-      <div className="dashboard-gauges">
-        {/* Gauge 1: Power */}
-        <div className="gauge-box">
-          <div className="gauge-svg-wrapper">
-            <svg viewBox="0 0 100 100">
-              <circle className="gauge-track" cx="50" cy="50" r="42" />
-              <circle
-                className="gauge-indicator color-red"
-                cx="50"
-                cy="50"
-                r="42"
-                strokeDasharray={`${(powerPct * 263.8) / 100} 263.8`}
-              />
-            </svg>
-            <div className="gauge-inner">
-              <Gauge size={16} className="text-red-500" />
-              <strong className="text-red-400">{powerVal}</strong>
-              <span>BHP</span>
-            </div>
+      <div className="dashboard-gauges-sleek">
+        {/* Sleek Gauge 1: Power */}
+        <div className="sleek-gauge-card">
+          <div className="sleek-gauge-header">
+            <span>OUTPUT POWER</span>
+            <Gauge size={14} />
           </div>
-          <p className="gauge-label">Output Power</p>
+          <div className="sleek-gauge-body">
+            <strong>{powerVal}</strong>
+            <span className="unit">BHP</span>
+          </div>
+          <div className="sleek-progress-track">
+            <div className="sleek-progress-fill" style={{ width: `${powerPct}%` }} />
+          </div>
         </div>
 
-        {/* Gauge 2: Torque */}
-        <div className="gauge-box">
-          <div className="gauge-svg-wrapper">
-            <svg viewBox="0 0 100 100">
-              <circle className="gauge-track" cx="50" cy="50" r="42" />
-              <circle
-                className="gauge-indicator color-blue"
-                cx="50"
-                cy="50"
-                r="42"
-                strokeDasharray={`${(torquePct * 263.8) / 100} 263.8`}
-              />
-            </svg>
-            <div className="gauge-inner">
-              <Zap size={16} className="text-blue-500" />
-              <strong className="text-blue-400">{torqueVal}</strong>
-              <span>NM</span>
-            </div>
+        {/* Sleek Gauge 2: Torque */}
+        <div className="sleek-gauge-card">
+          <div className="sleek-gauge-header">
+            <span>PEAK TORQUE</span>
+            <Zap size={14} />
           </div>
-          <p className="gauge-label">Peak Torque</p>
+          <div className="sleek-gauge-body">
+            <strong>{torqueVal}</strong>
+            <span className="unit">NM</span>
+          </div>
+          <div className="sleek-progress-track">
+            <div className="sleek-progress-fill" style={{ width: `${torquePct}%` }} />
+          </div>
         </div>
 
-        {/* Gauge 3: Mileage */}
-        <div className="gauge-box">
-          <div className="gauge-svg-wrapper">
-            <svg viewBox="0 0 100 100">
-              <circle className="gauge-track" cx="50" cy="50" r="42" />
-              <circle
-                className="gauge-indicator color-cyan"
-                cx="50"
-                cy="50"
-                r="42"
-                strokeDasharray={`${(mileagePct * 263.8) / 100} 263.8`}
-              />
-            </svg>
-            <div className="gauge-inner">
-              <Droplet size={16} className="text-cyan-500" />
-              <strong className="text-cyan-400">{mileageVal}</strong>
-              <span>KMPL</span>
-            </div>
+        {/* Sleek Gauge 3: Fuel Efficiency */}
+        <div className="sleek-gauge-card">
+          <div className="sleek-gauge-header">
+            <span>FUEL EFFICIENCY</span>
+            <Droplet size={14} />
           </div>
-          <p className="gauge-label">Fuel Efficiency</p>
+          <div className="sleek-gauge-body">
+            <strong>{mileageVal}</strong>
+            <span className="unit">{activeCar.fuel_type?.toLowerCase().includes('electric') ? 'KM/CHARGE' : 'KMPL'}</span>
+          </div>
+          <div className="sleek-progress-track">
+            <div className="sleek-progress-fill" style={{ width: `${mileagePct}%` }} />
+          </div>
         </div>
       </div>
 
