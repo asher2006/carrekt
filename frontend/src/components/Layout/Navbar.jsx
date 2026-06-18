@@ -1,20 +1,21 @@
-import { Menu, ScanSearch, ShieldCheck, X } from 'lucide-react';
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Menu, ScanSearch, ShieldCheck, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import './Navbar.css';
 
 const navItems = [
-  { to: '/', label: 'Scan' },
-  { to: '/explore', label: 'Catalog' },
-  { to: '/compare', label: 'Compare' },
+  { to: '/', label: 'Scan Dashboard' },
+  { to: '/explore', label: 'Car Catalog' },
+  { to: '/compare', label: 'Comparison Lab' },
 ];
-
-const navLinkClass = ({ isActive }) => `nav-link ${isActive ? 'is-active' : ''}`;
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { user, signOut } = useAuth();
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   return (
     <header className="site-header">
@@ -29,18 +30,38 @@ const Navbar = () => {
           </div>
         </Link>
 
+        {/* Desktop Navigation with Sliding Pill */}
         <nav className="desktop-nav">
-          {navItems.map((item) => (
-            <NavLink key={item.to} to={item.to} className={navLinkClass}>
-              {item.label}
-            </NavLink>
-          ))}
+          {navItems.map((item) => {
+            const isActive =
+              item.to === '/'
+                ? currentPath === '/'
+                : currentPath.startsWith(item.to);
+
+            return (
+              <Link
+                key={item.to}
+                to={item.to}
+                className={`nav-link-item ${isActive ? 'is-active' : ''}`}
+              >
+                {isActive && (
+                  <motion.div
+                    layoutId="desktop-nav-pill"
+                    className="nav-active-pill"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+                <span className="nav-link-text">{item.label}</span>
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="nav-actions">
           <div className="beta-chip">
+            <span className="live-pulsing-bulb" />
             <ShieldCheck size={14} />
-            Public beta ready
+            AI Pipeline Active
           </div>
           {user ? (
             <button
@@ -73,23 +94,43 @@ const Navbar = () => {
       {mobileOpen && (
         <div className="mobile-panel">
           <nav>
-            {navItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                className={navLinkClass}
+            {navItems.map((item) => {
+              const isActive =
+                item.to === '/'
+                  ? currentPath === '/'
+                  : currentPath.startsWith(item.to);
+
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className={`nav-link-item ${isActive ? 'is-active' : ''}`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  <span className="nav-link-text">{item.label}</span>
+                </Link>
+              );
+            })}
+            {user ? (
+              <button
+                type="button"
+                onClick={() => {
+                  signOut();
+                  setMobileOpen(false);
+                }}
+                className="nav-ghost w-full mt-2"
+              >
+                Sign out
+              </button>
+            ) : (
+              <Link
+                to="/auth"
+                className="nav-account w-full mt-2 text-center"
                 onClick={() => setMobileOpen(false)}
               >
-                {item.label}
-              </NavLink>
-            ))}
-            <Link
-              to="/auth"
-              className="nav-account"
-              onClick={() => setMobileOpen(false)}
-            >
-              {user ? 'Account' : 'Sign in'}
-            </Link>
+                Sign in
+              </Link>
+            )}
           </nav>
         </div>
       )}

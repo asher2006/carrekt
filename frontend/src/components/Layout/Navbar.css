@@ -90,7 +90,7 @@
   gap: 0.45rem;
 }
 
-.nav-link,
+.nav-link-item,
 .nav-ghost,
 .nav-account,
 .nav-toggle {
@@ -101,43 +101,41 @@
               box-shadow 200ms ease;
 }
 
-.nav-link {
+.nav-link-item {
+  position: relative;
   border-radius: 999px;
-  padding: 0.65rem 1.1rem;
+  padding: 0.65rem 1.25rem;
   color: var(--text-secondary);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  position: relative;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-link:hover {
+.nav-link-item:hover {
   color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.045);
 }
 
-.nav-link.is-active {
-  color: var(--accent-primary);
-  background: rgba(59, 130, 246, 0.08);
-  box-shadow: inset 0 0 0 1px rgba(59, 130, 246, 0.2);
+.nav-link-item.is-active {
+  color: #ffffff;
 }
 
-.nav-link::after {
-  content: '';
+.nav-active-pill {
   position: absolute;
-  bottom: 2px;
-  left: 25%;
-  right: 25%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
-  opacity: 0;
-  transform: scaleX(0.5);
-  transition: opacity 250ms ease, transform 250ms ease;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.24);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.04);
+  z-index: 1;
 }
 
-.nav-link.is-active::after {
-  opacity: 1;
-  transform: scaleX(1);
+.nav-link-text {
+  position: relative;
+  z-index: 2;
 }
 
 .beta-chip {
@@ -173,6 +171,21 @@
 .beta-chip svg {
   color: var(--accent-green);
   filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.4));
+}
+
+.live-pulsing-bulb {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-cyan);
+  box-shadow: 0 0 8px var(--accent-cyan);
+  animation: live-bulb-pulse 1.8s infinite ease-in-out;
+  flex: 0 0 auto;
+}
+
+@keyframes live-bulb-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; box-shadow: 0 0 4px var(--accent-cyan); }
+  50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 10px var(--accent-cyan), 0 0 18px rgba(34, 211, 238, 0.5); }
 }
 
 .nav-ghost,
@@ -257,7 +270,7 @@
     gap: 0.4rem;
   }
 
-  .mobile-panel .nav-link,
+  .mobile-panel .nav-link-item,
   .mobile-panel .nav-account {
     display: flex;
     justify-content: center;
