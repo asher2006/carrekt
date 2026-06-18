@@ -26,6 +26,7 @@ import HowItWorks from '../components/Home/HowItWorks';
 import ExamplePredictions from '../components/Home/ExamplePredictions';
 import SpecsDashboard from '../components/Home/SpecsDashboard';
 import ComparisonPreview from '../components/Home/ComparisonPreview';
+import BrandGrid from '../components/Home/BrandGrid';
 
 import './HomePage.css';
 
