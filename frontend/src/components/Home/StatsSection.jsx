@@ -1,101 +1,75 @@
-import { useEffect, useState, useRef } from 'react';
+import { TrendingUp, Zap, Shield } from 'lucide-react';
 import './StatsSection.css';
-
-const AnimatedCounter = ({ target, duration = 1500, suffix = '', decimals = 0 }) => {
-  const [count, setCount] = useState(0);
-  const countRef = useRef(0);
-  const elementRef = useRef(null);
-  const [hasStarted, setHasStarted] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHasStarted(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!hasStarted) return;
-
-    let start = 0;
-    const end = parseFloat(target);
-    if (isNaN(end)) return;
-
-    const startTime = performance.now();
-
-    const animate = (currentTime) => {
-      const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / duration, 1);
-      
-      // Ease out quad formula
-      const easeProgress = progress * (2 - progress);
-      const currentValue = start + easeProgress * (end - start);
-      
-      countRef.current = currentValue;
-      setCount(currentValue);
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        setCount(end);
-      }
-    };
-
-    requestAnimationFrame(animate);
-  }, [hasStarted, target, duration]);
-
-  return (
-    <span ref={elementRef} className="counter-value">
-      {count.toFixed(decimals)}
-      {suffix}
-    </span>
-  );
-};
-
-const statsData = [
-  { label: 'Recognition Accuracy', value: '99.2', suffix: '%', decimals: 1, detail: 'Top-1 class classification accuracy' },
-  { label: 'Supported Models', value: '250', suffix: '+', decimals: 0, detail: 'Trained vehicle configurations' },
-  { label: 'Average Latency', value: '120', suffix: 'ms', decimals: 0, detail: 'GPU inference response time' },
-  { label: 'Dataset Size', value: '50', suffix: 'K+', decimals: 0, detail: 'High-res annotated training samples' },
-  { label: 'Top-3 Decision View', value: '99.8', suffix: '%', decimals: 1, detail: 'Cumulative probability validation' },
-];
 
 export default function StatsSection() {
   return (
     <div className="stats-container">
       <div className="stats-header">
-        <span className="eyebrow">Platform Telemetry</span>
-        <h2>Model Benchmarks & Performance</h2>
-        <p>Real-time neural network statistics captured during validation cycles and production runtime.</p>
+        <div className="stats-header-left">
+          <span className="eyebrow">OPERATIONAL STANDARDS</span>
+          <h2>Precision Metrology</h2>
+        </div>
+        <div className="stats-header-right">
+          <p>
+            Our performance metrics are measured against industry-leading benchmarks for sub-second analysis.
+          </p>
+        </div>
       </div>
-      <div className="stats-grid">
-        {statsData.map((stat) => (
-          <div key={stat.label} className="stats-card">
-            <div className="stats-glow" />
-            <div className="stats-content">
-              <p className="stats-label">{stat.label}</p>
-              <strong className="stats-number">
-                <AnimatedCounter
-                  target={stat.value}
-                  suffix={stat.suffix}
-                  decimals={stat.decimals}
-                />
-              </strong>
-              <span className="stats-detail">{stat.detail}</span>
+      
+      <div className="stats-grid-three">
+        {/* Card 1: Recognition Density */}
+        <div className="stats-card-premium">
+          <div className="stats-card-icon">
+            <TrendingUp size={20} />
+          </div>
+          <h3>Recognition Density</h3>
+          <div className="stats-metrics-rows">
+            <div className="stats-metric-row">
+              <span>Confidence</span>
+              <strong>99.85%</strong>
+            </div>
+            <div className="stats-metric-row">
+              <span>Sample Size</span>
+              <strong>1.2M/day</strong>
             </div>
           </div>
-        ))}
+        </div>
+
+        {/* Card 2: Throughput Rate */}
+        <div className="stats-card-premium">
+          <div className="stats-card-icon">
+            <Zap size={20} />
+          </div>
+          <h3>Throughput Rate</h3>
+          <div className="stats-metrics-rows">
+            <div className="stats-metric-row">
+              <span>Frame Latency</span>
+              <strong>4.2ms</strong>
+            </div>
+            <div className="stats-metric-row">
+              <span>Packet Loss</span>
+              <strong>0.00%</strong>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 3: Vault Security */}
+        <div className="stats-card-premium">
+          <div className="stats-card-icon">
+            <Shield size={20} />
+          </div>
+          <h3>Vault Security</h3>
+          <div className="stats-metrics-rows">
+            <div className="stats-metric-row">
+              <span>Encryption</span>
+              <strong>AES-256</strong>
+            </div>
+            <div className="stats-metric-row">
+              <span>Uptime</span>
+              <strong>99.999%</strong>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

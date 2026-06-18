@@ -43,7 +43,7 @@
   text-transform: uppercase;
   color: var(--accent-primary);
   border: 1px solid var(--border-color);
-  border-radius: 4px;
+  border-radius: 0;
   background: var(--bg-secondary);
   padding: 0.5rem 0.85rem;
 }
@@ -53,9 +53,14 @@
   color: var(--text-primary);
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 4.8vw, 3.8rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.hero-grid h1 span {
+  font-style: italic;
+  color: var(--accent-primary);
 }
 
 .hero-copy {
@@ -66,10 +71,30 @@
   max-width: 600px;
 }
 
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.2rem;
+}
+
 .hero-intake-wrapper {
   width: 100%;
   max-width: 540px;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+}
+
+.intake-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1.5rem 0 0.25rem;
+  color: var(--text-primary);
+}
+
+.intake-copy {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  margin: 0 0 1rem;
 }
 
 /* ── Upload frame deck ── */
@@ -77,7 +102,7 @@
   position: relative;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  border-radius: 8px; /* Sharp container corners */
+  border-radius: 0; /* Sharp container corners */
   background: var(--bg-secondary);
   padding: 0.85rem;
   box-shadow: none; /* Removed soft shadows */
@@ -95,7 +120,7 @@
   justify-content: center;
   gap: 0.85rem;
   border: 1px dashed var(--border-color);
-  border-radius: 6px;
+  border-radius: 0;
   background: var(--bg-primary);
   padding: 2.2rem 1.5rem;
   text-align: center;
@@ -108,7 +133,7 @@
 
 .upload-dropzone-panel.is-drag-active {
   border-color: var(--accent-primary);
-  background-color: rgba(0, 163, 255, 0.04);
+  background-color: rgba(229, 184, 59, 0.04);
 }
 
 .upload-deck-icon {
@@ -116,7 +141,7 @@
   width: 48px;
   height: 48px;
   place-items: center;
-  border-radius: 8px;
+  border-radius: 0;
   border: 1px solid var(--border-color);
   color: var(--accent-primary);
   background: var(--bg-secondary);
@@ -124,13 +149,18 @@
 
 .upload-deck-eyebrow {
   margin: 0;
+  color: var(--accent-primary);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .upload-dropzone-panel h3 {
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.35rem;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--text-primary);
   letter-spacing: -0.01em;
 }
@@ -161,38 +191,61 @@
   gap: 0.5rem;
   border-radius: 4px; /* Sharp button corners */
   padding: 0.65rem 1.25rem;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
   transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+  text-transform: uppercase;
 }
 
 .button-primary-glow {
-  color: #ffffff;
+  color: var(--bg-primary);
   background: var(--accent-primary);
-  box-shadow: none; /* Removed glowing sienna/red shadows */
+  border: 1px solid var(--accent-primary);
 }
 
 .button-secondary-hologram {
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
-  background: var(--bg-primary);
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+  background: transparent;
 }
 
 .button-primary-glow:hover {
   background-color: var(--accent-primary-dim);
+  border-color: var(--accent-primary-dim);
   transform: translateY(-1px);
 }
 
 .button-secondary-hologram:hover {
-  border-color: var(--accent-primary);
-  background-color: rgba(255, 255, 255, 0.02);
+  border-color: var(--accent-primary-dim);
+  background-color: rgba(229, 184, 59, 0.05);
   transform: translateY(-1px);
+}
+
+.cancel-intake-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.cancel-intake-btn:hover {
+  color: var(--accent-primary);
 }
 
 .camera-intake-shell {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   border: 1px solid var(--border-color);
 }

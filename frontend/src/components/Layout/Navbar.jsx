@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import { Menu, ScanSearch, ShieldCheck, X } from 'lucide-react';
+import { Menu, Shield, ShieldCheck, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import './Navbar.css';
 
 const navItems = [
-  { to: '/', label: 'Scan Dashboard' },
-  { to: '/explore', label: 'Car Catalog' },
-  { to: '/compare', label: 'Comparison Lab' },
+  { to: '/', label: 'COLLECTION' },
+  { to: '/explore', label: 'METRICS' },
+  { to: '/compare', label: 'INTELLIGENCE' },
+  { to: '/archive', label: 'ARCHIVE' },
 ];
 
 const Navbar = () => {
@@ -22,26 +23,27 @@ const Navbar = () => {
       <div className="nav-shell">
         <Link to="/" className="brand-lockup">
           <div className="brand-mark">
-            <ScanSearch size={20} />
+            <Shield size={20} />
           </div>
           <div>
-            <p>Vehicle Vision</p>
-            <strong>CarRecog</strong>
+            <strong>AUTONOME</strong>
           </div>
         </Link>
 
         {/* Desktop Navigation with Sliding Pill */}
         <nav className="desktop-nav">
           {navItems.map((item) => {
+            // Treat /archive as /explore for active state mapping
+            const targetPath = item.to === '/archive' ? '/explore' : item.to;
             const isActive =
-              item.to === '/'
+              targetPath === '/'
                 ? currentPath === '/'
-                : currentPath.startsWith(item.to);
+                : currentPath.startsWith(targetPath);
 
             return (
               <Link
-                key={item.to}
-                to={item.to}
+                key={item.label}
+                to={item.to === '/archive' ? '/explore' : item.to}
                 className={`nav-link-item ${isActive ? 'is-active' : ''}`}
               >
                 {isActive && (
@@ -95,15 +97,16 @@ const Navbar = () => {
         <div className="mobile-panel">
           <nav>
             {navItems.map((item) => {
+              const targetPath = item.to === '/archive' ? '/explore' : item.to;
               const isActive =
-                item.to === '/'
+                targetPath === '/'
                   ? currentPath === '/'
-                  : currentPath.startsWith(item.to);
+                  : currentPath.startsWith(targetPath);
 
               return (
                 <Link
-                  key={item.to}
-                  to={item.to}
+                  key={item.label}
+                  to={item.to === '/archive' ? '/explore' : item.to}
                   className={`nav-link-item ${isActive ? 'is-active' : ''}`}
                   onClick={() => setMobileOpen(false)}
                 >

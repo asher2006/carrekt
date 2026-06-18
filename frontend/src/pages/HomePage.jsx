@@ -107,6 +107,7 @@ const UploadPanel = ({ onFileSelect, onCameraOpen }) => {
 
 export default function HomePage() {
   const [selectedFile, setSelectedFile] = useState(null);
+  const [intakeOpen, setIntakeOpen] = useState(false);
   const [cameraOpen, setCameraOpen] = useState(false);
   const [cameraResult, setCameraResult] = useState(null);
   const { prediction, carDetails, loading, error, predict, reset } = usePrediction();
@@ -179,34 +180,71 @@ export default function HomePage() {
             <section className="hero-grid">
               <div className="hero-left-col">
                 <div className="hero-status">
-                  <Sparkles size={14} className="pulse-blue" />
-                  Neural Network Model Classifier V2.5
+                  <span className="live-pulsing-bulb" />
+                  PREMIUM ACCESS GRANTED
                 </div>
 
-                <h1>
-                  Automotive Recognition Platform
-                </h1>
-                
-                <p className="hero-copy">
-                  Upload an exterior photo or trigger the live telemetry feed. CarRecog localizes coordinates, calculates classification confidence, and renders dashboard metrics instantly.
-                </p>
+                {!intakeOpen ? (
+                  <>
+                    <h1>
+                      The Vanguard of <br />
+                      <span>Automotive Intelligence.</span>
+                    </h1>
+                    
+                    <p className="hero-copy">
+                      Elevating vehicle recognition to an editorial standard. Our neural architecture processes reality with the precision of a master watchmaker, delivering deep-tissue telemetry in real-time.
+                    </p>
 
-                {/* Intake Panel placed prominently in Left Hero Column */}
-                <div className="hero-intake-wrapper">
-                  {cameraOpen ? (
-                    <div className="camera-intake-shell">
-                      <CameraScanner 
-                        onResult={handleCameraResult} 
-                        onClose={() => setCameraOpen(false)} 
-                      />
+                    <div className="hero-actions">
+                      <button
+                        type="button"
+                        className="button-primary-glow"
+                        onClick={() => setIntakeOpen(true)}
+                      >
+                        Initialize HUD
+                        <ArrowRight size={15} />
+                      </button>
+                      <Link
+                        to="/explore"
+                        className="button-secondary-hologram"
+                      >
+                        Read Specifications
+                      </Link>
                     </div>
-                  ) : (
-                    <UploadPanel 
-                      onFileSelect={handleFileSelect} 
-                      onCameraOpen={() => setCameraOpen(true)} 
-                    />
-                  )}
-                </div>
+                  </>
+                ) : (
+                  <>
+                    <h2 className="intake-title">Intake Terminal</h2>
+                    <p className="intake-copy">Select an image or activate device camera scanner to run diagnostics.</p>
+                    
+                    {/* Intake Panel placed prominently in Left Hero Column */}
+                    <div className="hero-intake-wrapper">
+                      {cameraOpen ? (
+                        <div className="camera-intake-shell">
+                          <CameraScanner 
+                            onResult={handleCameraResult} 
+                            onClose={() => setCameraOpen(false)} 
+                          />
+                        </div>
+                      ) : (
+                        <div className="upload-intake-shell">
+                          <UploadPanel 
+                            onFileSelect={handleFileSelect} 
+                            onCameraOpen={() => setCameraOpen(true)} 
+                          />
+                          <button
+                            type="button"
+                            className="cancel-intake-btn"
+                            onClick={() => setIntakeOpen(false)}
+                          >
+                            <X size={14} />
+                            Cancel & Return
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </>
+                )}
               </div>
 
               {/* Live Interactive vision pipeline on Right Hero Column */}
@@ -217,18 +255,6 @@ export default function HomePage() {
 
             {/* Performance Statistics Grid */}
             <StatsSection />
-
-            {/* How It Works Flow */}
-            <HowItWorks />
-
-            {/* Verification / Try this image showcase */}
-            <ExamplePredictions onRunScan={handleFileSelect} />
-
-            {/* Supported Brands Grid */}
-            <BrandGrid />
-
-            {/* Side-by-side Rivals preview */}
-            <ComparisonPreview />
           </motion.div>
         )}
 

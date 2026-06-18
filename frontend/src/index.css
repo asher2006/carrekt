@@ -1,27 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --bg-primary: #0A111E;
-  --bg-secondary: #111C2E;
-  --bg-panel: rgba(17, 28, 46, 0.85);
-  --text-primary: #F1F5F9;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
-  --accent-primary: #14B8A6;
-  --accent-primary-dim: #0D9488;
-  --accent-cta: #F59E0B;
-  --accent-cta-deep: #D97706;
-  --accent-blue: #3B82F6;
-  --accent-green: #10B981;
-  --accent-cyan: #06B6D4;
-  --accent-red: #EF4444;
-  --border-color: rgba(148, 163, 184, 0.12);
-  --font-display: 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --bg-primary: #0a0b0c;
+  --bg-secondary: #121315;
+  --bg-panel: rgba(18, 19, 21, 0.85);
+  --text-primary: #e3e2e5;
+  --text-secondary: #8a8c8e;
+  --text-muted: #5e6062;
+  --accent-primary: #e5b83b;
+  --accent-primary-dim: #af8b24;
+  --accent-cta: #e5b83b;
+  --accent-cta-deep: #af8b24;
+  --accent-blue: #c6c6c6;
+  --accent-green: #2ecc71;
+  --accent-cyan: #c6c6c6;
+  --accent-red: #e74c3c;
+  --border-color: rgba(255, 255, 255, 0.06);
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Hanken Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
 
@@ -41,7 +41,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font-body);
-  background: #08151c;
+  background: var(--bg-primary);
   color: var(--text-primary);
   overflow-x: hidden;
 }
@@ -52,10 +52,10 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(0, 163, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 163, 255, 0.02) 1px, transparent 1px);
-  background-size: 30px 30px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent 90%);
+    linear-gradient(rgba(229, 184, 59, 0.008) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(229, 184, 59, 0.006) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), transparent 90%);
   z-index: 1;
 }
 
