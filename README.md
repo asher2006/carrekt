@@ -68,7 +68,7 @@ cd backend && node server.js
 # Terminal 3: Frontend
 cd frontend && npm run dev
 ```
-
+bruh
 ### 5. Open the App
 Visit http://localhost:5173
 
